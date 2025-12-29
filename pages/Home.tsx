@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router';
-import { DataService } from '../services/storage';
-import { Model } from '../types';
-import ModelCard from '../components/ModelCard';
-import ModelModal from '../components/ModelModal';
+import { DataService } from '../services/storage.ts';
+import { Model } from '../types.ts';
+import ModelCard from '../components/ModelCard.tsx';
+import ModelModal from '../components/ModelModal.tsx';
 import { ChevronDown, Users, Zap, Verified, ArrowRight, Star } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -14,7 +14,6 @@ const Home: React.FC = () => {
   useEffect(() => {
     const load = () => {
       const allModels = DataService.getModels();
-      // Filtrar modelos marcadas como destaque (featured) E que estão ativas (active)
       const featuredAndActive = allModels.filter(m => m.featured && m.active);
       setModels(featuredAndActive);
     };
@@ -25,7 +24,6 @@ const Home: React.FC = () => {
 
   return (
     <div className="relative overflow-hidden bg-black">
-      {/* Hero Video Section */}
       <div className="absolute inset-0 w-full h-screen -z-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/60 z-10"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/80 z-10"></div>
@@ -46,7 +44,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-12 glass border-x-0 border-white/5 mx-4 md:mx-auto max-w-7xl rounded-3xl grid grid-cols-2 md:grid-cols-4 gap-8 px-12 relative z-20 -mt-20 shadow-2xl">
         {[
           { label: 'Curadoria VIP', val: 'Exclusiva' },
@@ -61,7 +58,6 @@ const Home: React.FC = () => {
         ))}
       </section>
 
-      {/* Introduction */}
       <section className="py-32 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="relative">
@@ -100,7 +96,6 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Models Section (Filtered dynamically) */}
       <section className="py-24 bg-gradient-to-b from-transparent to-amber-950/5">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">

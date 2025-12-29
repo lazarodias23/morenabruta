@@ -1,6 +1,6 @@
 
-import { Model, Club } from '../types';
-import { MODELS as INITIAL_MODELS, CLUBS as INITIAL_CLUBS } from '../constants';
+import { Model, Club } from '../types.ts';
+import { MODELS as INITIAL_MODELS, CLUBS as INITIAL_CLUBS } from '../constants.tsx';
 
 const MODELS_KEY = 'mb_models_v1';
 const CLUBS_KEY = 'mb_clubs_v1';

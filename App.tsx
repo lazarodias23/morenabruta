@@ -1,13 +1,13 @@
 
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useNavigate } from 'react-router';
-import Layout from './components/Layout/Layout';
-import Home from './pages/Home';
-import Agencia from './pages/Agencia';
-import Modelos from './pages/ModelsPage';
-import Boates from './pages/ClubsPage';
-import Contato from './pages/ContactPage';
-import Dashboard from './pages/Dashboard';
+import Layout from './components/Layout/Layout.tsx';
+import Home from './pages/Home.tsx';
+import Agencia from './pages/Agencia.tsx';
+import Modelos from './pages/ModelsPage.tsx';
+import Boates from './pages/ClubsPage.tsx';
+import Contato from './pages/ContactPage.tsx';
+import Dashboard from './pages/Dashboard.tsx';
 
 const ShortcutHandler: React.FC = () => {
   const navigate = useNavigate();
